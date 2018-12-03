@@ -131,7 +131,6 @@
 		092A8C7321B138D500320D4F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				092A8C7821B139E600320D4F /* Parts */,
 				092A8C7121B138CA00320D4F /* LoginView.swift */,
 			);
 			path = View;
@@ -152,6 +151,7 @@
 				092A8C7621B1391E00320D4F /* Interactor */,
 				092A8C7421B138E300320D4F /* ViewController */,
 				092A8C7321B138D500320D4F /* View */,
+				092A8C7821B139E600320D4F /* ViewParts */,
 			);
 			path = PresentationLayer;
 			sourceTree = "<group>";
@@ -170,13 +170,13 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
-		092A8C7821B139E600320D4F /* Parts */ = {
+		092A8C7821B139E600320D4F /* ViewParts */ = {
 			isa = PBXGroup;
 			children = (
 				092A8C7921B4BFE300320D4F /* PasswordField.swift */,
 				092A8C7B21B4BFEF00320D4F /* IDField.swift */,
 			);
-			path = Parts;
+			path = ViewParts;
 			sourceTree = "<group>";
 		};
 		092A8C7D21B4C11300320D4F /* Router */ = {
@@ -607,6 +607,7 @@
 			baseConfigurationReference = 09C2F73ABF7936F80B16F9BA /* Pods-CleanSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CleanSample/Info.plist;
@@ -628,6 +629,7 @@
 			baseConfigurationReference = 071F49349FFE09020336D07E /* Pods-CleanSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CleanSample/Info.plist;
