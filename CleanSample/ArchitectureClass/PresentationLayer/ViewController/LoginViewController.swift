@@ -18,7 +18,6 @@ class LoginViewController: UIViewController {
         self.setupDisplayComponent()
     }
 
-
     /// MARK: Button touch event
     @objc func touchDownButton(sender: UIButton) {
         sender.backgroundColor = UIColor(hex: Color.ColorCode.buttonThema.rawValue,
@@ -32,7 +31,6 @@ class LoginViewController: UIViewController {
     @objc func touchUpAuthChallenge(sender: UIButton) {
         sender.backgroundColor = UIColor(hex: Color.ColorCode.buttonThema.rawValue)
     }
-
 
     /// MARK: Private method
     private func setupDisplayComponent() {
