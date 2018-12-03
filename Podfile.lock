@@ -1,0 +1,50 @@
+PODS:
+  - Alamofire (4.7.3)
+  - CocoaLumberjack (3.4.2):
+    - CocoaLumberjack/Default (= 3.4.2)
+    - CocoaLumberjack/Extensions (= 3.4.2)
+  - CocoaLumberjack/Default (3.4.2)
+  - CocoaLumberjack/Extensions (3.4.2):
+    - CocoaLumberjack/Default
+  - HydraAsync (1.2.1)
+  - NotAutoLayout (3.2.0)
+  - ObjectMapper (3.3.0)
+  - SVGKit (2.1.0):
+    - CocoaLumberjack (~> 3.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - HydraAsync
+  - NotAutoLayout
+  - ObjectMapper
+  - SVGKit (from `https://github.com/SVGKit/SVGKit.git`, branch `2.x`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - CocoaLumberjack
+    - HydraAsync
+    - NotAutoLayout
+    - ObjectMapper
+
+EXTERNAL SOURCES:
+  SVGKit:
+    :branch: 2.x
+    :git: https://github.com/SVGKit/SVGKit.git
+
+CHECKOUT OPTIONS:
+  SVGKit:
+    :commit: bfe62f6d45f55c9fe39619d9e91fed1844c59da6
+    :git: https://github.com/SVGKit/SVGKit.git
+
+SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  CocoaLumberjack: db7cc9e464771f12054c22ff6947c5a58d43a0fd
+  HydraAsync: 8f2ab62d57e140b4ca587ae0f66e1eb04e8e6965
+  NotAutoLayout: 4723ad82a21a7c6c60c823fff7f7c29467811b92
+  ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
+  SVGKit: 8a2fc74258bdb2abb54d3b65f3dd68b0277a9c4d
+
+PODFILE CHECKSUM: 944ed4ee45111f5d1eed00768106b75d0c731a94
+
+COCOAPODS: 1.5.3

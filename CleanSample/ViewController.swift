@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  CleanSample
 //
-//  Created by u2008016 on 2018/11/30.
+//  Created by mugicha755 on 2018/11/30.
 //  Copyright © 2018 mugicha755. All rights reserved.
 //
 
@@ -17,4 +17,3 @@ class ViewController: UIViewController {
 
 
 }
-
