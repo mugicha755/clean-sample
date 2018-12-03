@@ -59,21 +59,15 @@ class LoginView: LayoutInfoStoredView {
     }
 
     public var submit: UIButton? {
-        get {
-            return self.submitButton
-        }
+        return self.submitButton
     }
 
     public var passwordField: PasswordField {
-        get {
-            return self.passwordTextField
-        }
+        return self.passwordTextField
     }
 
     public var idField: IDField {
-        get {
-            return self.idTextField
-        }
+        return self.idTextField
     }
 
     public override init(frame: CGRect) {

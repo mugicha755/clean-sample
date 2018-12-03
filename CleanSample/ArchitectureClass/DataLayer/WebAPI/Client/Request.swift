@@ -25,7 +25,7 @@ protocol Request {
 extension Request {
 
     var baseURL: NSURL {
-        return NSURL(string: BaseURL)!
+        return NSURL(string: baseRequestURL)!
     }
 
     var HTTPHeaderFields: [String: String] {
@@ -41,7 +41,7 @@ extension Request {
     }
 
     var timeoutInterval: Double {
-        return DefaultTimeOut
+        return defaultTimeOut
     }
 
 }

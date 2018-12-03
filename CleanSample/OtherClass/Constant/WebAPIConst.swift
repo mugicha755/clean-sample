@@ -15,16 +15,16 @@ public enum Method: String {
 
 /// APIError Object
 public enum APIError: Error {
-    case ConnectionError(NSError)
-    case InvalidResponse(AnyObject?)
-    case ParseError(AnyObject?)
-    case ErrorResponse(AnyObject?)
+    case connectionError(NSError)
+    case invalidResponse(AnyObject?)
+    case parseError(AnyObject?)
+    case errorResponse(AnyObject?)
 }
 
-let DefaultTimeOut = 30.0 as Double
+let defaultTimeOut = 30.0 as Double
 
 /// WebAPI base URL
-let BaseURL = "*******************"
+let baseRequestURL = "*******************"
 
 /// WebAPI API Path
 enum APIPath: String {

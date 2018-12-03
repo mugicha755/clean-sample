@@ -8,7 +8,7 @@
 
 import UIKit
 
-let UserDefaultKeyStartupStatus: String = "ud_key_startup"
+let userDefaultKeyStartupStatus: String = "ud_key_startup"
 
 enum StartupSequenceStatus: String {
     case initial = "Initial"
@@ -20,7 +20,7 @@ enum StartupSequenceDisplayView: String {
     case daily = "CleanSample.DailyRecordViewController"
 }
 
-let StartupSequenceStatusViewMap: [String: String] = [
+let startupSequenceStatusViewMap: [String: String] = [
     StartupSequenceStatus.initial.rawValue: StartupSequenceDisplayView.authentication.rawValue,
     StartupSequenceStatus.finishAuthentication.rawValue: StartupSequenceDisplayView.daily.rawValue
 ]

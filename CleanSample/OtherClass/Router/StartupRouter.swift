@@ -15,10 +15,10 @@ class StartupRouter {
     /// - Returns: StartupRouterResult
     static func router() -> StartupRouterResult {
         let userDefaults = UserDefaults.standard
-        guard let currentStatus = userDefaults.string(forKey: UserDefaultKeyStartupStatus) else {
+        guard let currentStatus = userDefaults.string(forKey: userDefaultKeyStartupStatus) else {
             return self.defaultView()
         }
-        guard let nextView = StartupSequenceStatusViewMap[currentStatus] else {
+        guard let nextView = startupSequenceStatusViewMap[currentStatus] else {
             return self.defaultView()
         }
         guard let viewControllerClass = NSClassFromString(nextView) as? UIViewController.Type else {

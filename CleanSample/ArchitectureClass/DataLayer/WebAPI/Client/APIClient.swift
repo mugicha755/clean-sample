@@ -22,7 +22,7 @@ class APIClient {
                 if 200..<300 ~= response.statusCode {
                     return .success
                 }
-                return .failure(APIError.InvalidResponse(response as AnyObject))
+                return .failure(APIError.invalidResponse(response as AnyObject))
             }
             .downloadProgress(queue: DispatchQueue.global(qos: .utility)) { _ in
                 /// WebAPI request progress
@@ -31,12 +31,12 @@ class APIClient {
                 guard case let .failure(error) = response.result else {
                     if let object = response.result.value, let URLResponse = response.response {
                         guard let entity = request.responseToEntity(object: object as AnyObject, URLResponse: URLResponse) else {
-                            reject(APIError.ParseError(object as AnyObject))
+                            reject(APIError.parseError(object as AnyObject))
                             return
                         }
                         resolve(entity)
                     } else {
-                        reject(APIError.InvalidResponse(nil))
+                        reject(APIError.invalidResponse(nil))
                     }
                     return
                 }
