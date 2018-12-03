@@ -12,7 +12,7 @@ internal struct Color {
     enum ColorCode: String {
         case applicationThema = "fff0f2"
         case buttonThema = "ffa1a7"
-        case FontThema = "413a3e"
+        case fontThema = "413a3e"
     }
 }
 

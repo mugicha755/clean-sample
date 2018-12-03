@@ -49,7 +49,9 @@ class LoginViewController: UIViewController {
         content.passwordField.textField.delegate = self
 
         self.view = content
+
     }
+
 }
 
 extension LoginViewController: UITextFieldDelegate {
@@ -67,4 +69,5 @@ extension LoginViewController: UITextFieldDelegate {
         return true
 
     }
+
 }

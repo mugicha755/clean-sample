@@ -20,7 +20,7 @@ enum StartupSequenceDisplayView: String {
     case daily = "CleanSample.DailyRecordViewController"
 }
 
-let StartupSequenceStatusViewMap: [String:String] = [
+let StartupSequenceStatusViewMap: [String: String] = [
     StartupSequenceStatus.initial.rawValue: StartupSequenceDisplayView.authentication.rawValue,
     StartupSequenceStatus.finishAuthentication.rawValue: StartupSequenceDisplayView.daily.rawValue
 ]

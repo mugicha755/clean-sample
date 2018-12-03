@@ -116,10 +116,13 @@ class LoginView: LayoutInfoStoredView {
     public override func layoutSubviews() {
         super.layoutSubviews()
         self.placeAllComponent()
+
     }
+
 }
 
 extension LoginView {
+
     private func setupImageView() {
         let component = self.imageView
         component.contentMode = .scaleAspectFit
@@ -131,7 +134,7 @@ extension LoginView {
         component.clipsToBounds = true
         component.numberOfLines = 0
         component.font = .systemFont(ofSize: 16)
-        component.textColor = UIColor(hex: Color.ColorCode.FontThema.rawValue)
+        component.textColor = UIColor(hex: Color.ColorCode.fontThema.rawValue)
         self.addSubview(component)
     }
 
@@ -140,7 +143,7 @@ extension LoginView {
         component.clipsToBounds = true
         component.numberOfLines = 0
         component.font = .systemFont(ofSize: 13)
-        component.textColor = UIColor(hex: Color.ColorCode.FontThema.rawValue)
+        component.textColor = UIColor(hex: Color.ColorCode.fontThema.rawValue)
         component.textColor = .black
         self.addSubview(component)
     }
@@ -170,10 +173,13 @@ extension LoginView {
         let component = self.submitButton
         component.layer.cornerRadius = 10
         self.addSubview(component)
+
     }
+
 }
 
 extension LoginView {
+
     private func placeAllComponent() {
         self.nal.layout(self.imageView, by: {$0
             .setTopCenter(by: {$0.topCenter})
@@ -227,5 +233,7 @@ extension LoginView {
             .setWidth(by: {$0.width})
             .setHeight(to: 50)
         })
+
     }
+
 }
