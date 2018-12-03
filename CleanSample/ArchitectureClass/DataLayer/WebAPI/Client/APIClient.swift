@@ -17,14 +17,14 @@ class APIClient {
     func request<T: Request>(request: T) -> Promise<T.Response> {
 
         let promise = Promise<T.Response> { resolve, reject, _ in
-            self.createRequest(request: request)?.validate { request, response, data in
+            self.createRequest(request: request)?.validate { _, response, _ in
                 /// pass 200~299, other value is failure
                 if 200..<300 ~= response.statusCode {
                     return .success
                 }
                 return .failure(APIError.InvalidResponse(response as AnyObject))
             }
-            .downloadProgress(queue: DispatchQueue.global(qos: .utility)) { progress in
+            .downloadProgress(queue: DispatchQueue.global(qos: .utility)) { _ in
                 /// WebAPI request progress
             }
             .responseJSON(completionHandler: { response in
@@ -35,7 +35,7 @@ class APIClient {
                             return
                         }
                         resolve(entity)
-                    }else {
+                    } else {
                         reject(APIError.InvalidResponse(nil))
                     }
                     return
