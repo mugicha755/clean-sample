@@ -132,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				092A8C7121B138CA00320D4F /* LoginView.swift */,
+				092A8C7821B139E600320D4F /* ViewParts */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -151,7 +152,6 @@
 				092A8C7621B1391E00320D4F /* Interactor */,
 				092A8C7421B138E300320D4F /* ViewController */,
 				092A8C7321B138D500320D4F /* View */,
-				092A8C7821B139E600320D4F /* ViewParts */,
 			);
 			path = PresentationLayer;
 			sourceTree = "<group>";
