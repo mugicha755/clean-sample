@@ -9,7 +9,7 @@
 import UIKit
 
 class StartupRouter {
-    
+
     /// StartupSequenceにおける画面のルーティング処理
     ///
     /// - Returns: StartupRouterResult
@@ -21,12 +21,15 @@ class StartupRouter {
         guard let nextView = StartupSequenceStatusViewMap[currentStatus] else {
             return self.defaultView()
         }
-        let viewControllerClass = NSClassFromString(nextView) as! UIViewController.Type
+        guard let viewControllerClass = NSClassFromString(nextView) as? UIViewController.Type else {
+            return self.defaultView()
+        }
         let viewController = viewControllerClass.init()
         return StartupRouterResult(navigationController: UINavigationController(rootViewController: viewController),
                                    viewController: nil)
+
     }
-    
+
     /// StartupSequenceにおけるデフォルト画面の返却
     ///
     /// - Returns: StartupRouterResult(デフォルト画面)
@@ -34,5 +37,6 @@ class StartupRouter {
         let viewController = LoginViewController()
         return StartupRouterResult(navigationController: UINavigationController(rootViewController: viewController),
                                    viewController: nil)
+
     }
 }

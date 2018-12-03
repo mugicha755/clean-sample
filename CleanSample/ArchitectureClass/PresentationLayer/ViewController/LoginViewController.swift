@@ -2,7 +2,7 @@
 //  LoginViewController.swift
 //  CleanSample
 //
-//  Created by u2008016 on 2018/12/03.
+//  Created by mugicha755 on 2018/12/03.
 //  Copyright © 2018 mugicha755. All rights reserved.
 //
 
@@ -21,16 +21,16 @@ class LoginViewController: UIViewController {
 
     /// MARK: Button touch event
     @objc func touchDownButton(sender: UIButton) {
-        sender.backgroundColor = UIColor(hex: Color.ColorCode.ButtonThema.rawValue,
+        sender.backgroundColor = UIColor(hex: Color.ColorCode.buttonThema.rawValue,
                                          alpha: 0.5)
     }
-    
+
     @objc func touchCancel(sender: UIButton) {
-        sender.backgroundColor = UIColor(hex: Color.ColorCode.ButtonThema.rawValue)
+        sender.backgroundColor = UIColor(hex: Color.ColorCode.buttonThema.rawValue)
     }
-    
+
     @objc func touchUpAuthChallenge(sender: UIButton) {
-        sender.backgroundColor = UIColor(hex: Color.ColorCode.ButtonThema.rawValue)
+        sender.backgroundColor = UIColor(hex: Color.ColorCode.buttonThema.rawValue)
     }
 
 
@@ -44,23 +44,27 @@ class LoginViewController: UIViewController {
         content.submit?.addTarget(self, action: #selector(touchCancel(sender:)), for: .touchUpOutside)
         content.submit?.addTarget(self, action: #selector(touchCancel(sender:)), for: .touchCancel)
         content.submit?.addTarget(self, action: #selector(touchCancel(sender:)), for: .touchDragExit)
-        
+
         content.idField.textField.delegate = self
         content.passwordField.textField.delegate = self
-        
+
         self.view = content
     }
 }
 
 extension LoginViewController: UITextFieldDelegate {
+
     /// MARK: text field delegate
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool{
-        if (textField.returnKeyType == .next) {
-            let view: LoginView = self.view as! LoginView
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField.returnKeyType == .next {
+            guard let view: LoginView = self.view as? LoginView else {
+                return true
+            }
             view.passwordField.textField.becomeFirstResponder()
         } else {
             textField.resignFirstResponder()
         }
         return true
+
     }
 }

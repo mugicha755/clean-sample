@@ -2,7 +2,7 @@
 //  Utility.swift
 //  CleanSample
 //
-//  Created by u2008016 on 2018/12/03.
+//  Created by mugicha755 on 2018/12/03.
 //  Copyright © 2018 mugicha755. All rights reserved.
 //
 
@@ -10,8 +10,8 @@ import UIKit
 
 internal struct Color {
     enum ColorCode: String {
-        case ApplicationThema = "fff0f2"
-        case ButtonThema = "ffa1a7"
+        case applicationThema = "fff0f2"
+        case buttonThema = "ffa1a7"
         case FontThema = "413a3e"
     }
 }
@@ -23,7 +23,7 @@ extension UIColor {
             let blue: Int = rawValue % 256
             let green: Int = ((rawValue - blue) / 256) % 256
             let red: Int = ((rawValue - blue) / 256 - green) / 256
-            
+
             self.init(red: CGFloat(red) / 255,
                       green: CGFloat(green) / 255,
                       blue: CGFloat(blue) / 255,
