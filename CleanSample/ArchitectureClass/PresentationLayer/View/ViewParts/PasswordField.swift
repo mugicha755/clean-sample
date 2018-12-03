@@ -102,7 +102,7 @@ extension PasswordField {
         })
 
         self.nal.layout(self.icon, by: { $0
-            .setTopLeft(to: .init(x: 9, y:9))
+            .setTopLeft(to: Point(x: 9, y: 9))
             .setWidth(to: 23)
             .setHeight(to: 23)
         })
