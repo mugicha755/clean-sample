@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  CleanSample
 //
-//  Created by u2008016 on 2018/11/30.
+//  Created by mugicha755 on 2018/11/30.
 //  Copyright © 2018 mugicha755. All rights reserved.
 //
 
@@ -16,6 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let router = StartupRouter.router()
+        if router.navigationController != nil {
+            router.navigationController?.setNavigationBarHidden(true, animated: false)
+            router.navigationController?.setToolbarHidden(true, animated: false)
+        }
+        self.window?.rootViewController = router.navigationController ?? router.viewController
+        self.window?.makeKeyAndVisible()
         return true
     }
 
@@ -43,4 +51,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
-
