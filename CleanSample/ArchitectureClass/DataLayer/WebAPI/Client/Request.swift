@@ -21,7 +21,6 @@ protocol Request {
     func responseToEntity(object: AnyObject, URLResponse: HTTPURLResponse) -> Response?
 }
 
-
 /// MARK: - Request
 extension Request {
 
@@ -47,12 +46,11 @@ extension Request {
 
 }
 
-
 /// MARK: - Response: Mappable
-extension Request where Response:Mappable {
+extension Request where Response: Mappable {
 
     func responseToEntity(object: AnyObject, URLResponse: HTTPURLResponse) -> Response? {
-        guard let entity = Mapper<Response>().map(JSONObject: object) else{
+        guard let entity = Mapper<Response>().map(JSONObject: object) else {
             return nil
         }
         return entity
