@@ -1,0 +1,5 @@
+inspecode:
+  swiftlint:
+    auto-fix: true
+  tailor: default
+  misspell: default
