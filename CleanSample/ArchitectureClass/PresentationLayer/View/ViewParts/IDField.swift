@@ -11,19 +11,17 @@ import NotAutoLayout
 import SVGKit
 
 class IDField: LayoutInfoStoredView {
-    private let bg: UIView
+    private let bgView: UIView
     private let icon: UIImageView
     private let iconBg: UIView
     private let inputField: UITextField
 
     public var textField: UITextField {
-        get {
-            return self.inputField
-        }
+        return self.inputField
     }
 
     public override init(frame: CGRect) {
-        self.bg = UIView()
+        self.bgView = UIView()
         self.icon = UIImageView()
         self.iconBg = UIView()
         self.inputField = UITextField()
@@ -59,7 +57,7 @@ class IDField: LayoutInfoStoredView {
 extension IDField {
 
     private func setupThisView() {
-        let component = self.bg
+        let component = self.bgView
         self.nal.layout(component,
                         with: CGRect(x: 0, y: 0, width: 349, height: 41))
         let maskPath = UIBezierPath(roundedRect: component.bounds,
