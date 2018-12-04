@@ -50,7 +50,7 @@ class APIClient {
     /// Alamofire用のDataRequestオブジェクトを生成
     private func createRequest<T: Request>(request: T) -> DataRequest? {
         do {
-            let uri = (request.baseURL.absoluteString! + request.path.rawValue + (request.option ?? "") ) as String
+            let uri = (request.baseURL.absoluteString! + request.path.rawValue + (request.option ?? "")) as String
             let params = request.parameters.count == 0 ? nil : request.parameters
             /// header連結
             let headers = (["content-type": "application/json"]).merging(request.HTTPHeaderFields, uniquingKeysWith: +)
