@@ -10,7 +10,24 @@ import UIKit
 import Hydra
 import SVGKit
 
+protocol LoginDisplayLogic: class {
+    func didAuthentication(_ model: LoginModel.Display.ViewModel)
+}
+
 class LoginViewController: UIViewController {
+
+    private var interactor: LoginBusinessLogic?
+
+    /// MARK: Object lifecycle
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        setup()
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
 
     /// MARK: ViewController LifeCycle
     override func viewDidLoad() {
@@ -30,9 +47,22 @@ class LoginViewController: UIViewController {
 
     @objc func touchUpAuthChallenge(sender: UIButton) {
         sender.backgroundColor = UIColor(hex: Color.ColorCode.buttonThema.rawValue)
+        let view = self.view as! LoginView
+        let request =  LoginModel.API.Request(id: view.idField.textField.text!,
+                                              password: view.passwordField.textField.text!)
+        interactor?.doLogin(request)
     }
 
     /// MARK: Private method
+    private func setup() {
+        let viewController = self
+        let interactor = LoginInteractor()
+        let presenter = LoginPresenter()
+        viewController.interactor = interactor
+        interactor.presenter = presenter
+        presenter.viewController = viewController
+    }
+
     private func setupDisplayComponent() {
         let content = LoginView(frame: self.view.frame)
         content.mainTitle = "Sign in"
@@ -66,6 +96,25 @@ extension LoginViewController: UITextFieldDelegate {
         }
         return true
 
+    }
+
+}
+
+extension LoginViewController: LoginDisplayLogic {
+    func didAuthentication(_ model: LoginModel.Display.ViewModel) {
+        let alert: UIAlertController = UIAlertController(
+            title: "Login result",
+            message: model.message,
+            preferredStyle:  UIAlertController.Style.alert)
+        
+        let defaultAction: UIAlertAction = UIAlertAction(
+            title: "OK",
+            style: UIAlertAction.Style.default, handler: {
+                (action: UIAlertAction!) -> Void in
+        })
+        
+        alert.addAction(defaultAction)
+        present(alert, animated: true, completion: nil)
     }
 
 }

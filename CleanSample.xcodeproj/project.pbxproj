@@ -26,6 +26,13 @@
 		09837F6121B5180900BA34DE /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09837F6021B5180900BA34DE /* Request.swift */; };
 		09837F6321B518D200BA34DE /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09837F6221B518D200BA34DE /* APIClient.swift */; };
 		09837F6521B51B9100BA34DE /* WebAPIConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09837F6421B51B9100BA34DE /* WebAPIConst.swift */; };
+		09837F6921B6077B00BA34DE /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09837F6821B6077B00BA34DE /* LoginInteractor.swift */; };
+		09837F6B21B6078F00BA34DE /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09837F6A21B6078F00BA34DE /* LoginPresenter.swift */; };
+		09837F7121B608A800BA34DE /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09837F7021B608A800BA34DE /* LoginModel.swift */; };
+		09837F7321B613C800BA34DE /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09837F7221B613C800BA34DE /* LoginUseCase.swift */; };
+		09837F7621B615D800BA34DE /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09837F7521B615D800BA34DE /* LoginAPI.swift */; };
+		09837F7821B6165200BA34DE /* LoginAPIEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09837F7721B6165200BA34DE /* LoginAPIEntity.swift */; };
+		09837F7A21B616B600BA34DE /* LoginAPIRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09837F7921B616B600BA34DE /* LoginAPIRepository.swift */; };
 		451358DDE4C97A139429D276 /* Pods_CleanSampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD79FC50505B47C760DE0B62 /* Pods_CleanSampleTests.framework */; };
 		ACF59C9FAA23AD7629AF9B0B /* Pods_CleanSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C4EA875F9DE75EEF4B19007 /* Pods_CleanSample.framework */; };
 /* End PBXBuildFile section */
@@ -65,6 +72,13 @@
 		09837F6021B5180900BA34DE /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		09837F6221B518D200BA34DE /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		09837F6421B51B9100BA34DE /* WebAPIConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebAPIConst.swift; sourceTree = "<group>"; };
+		09837F6821B6077B00BA34DE /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		09837F6A21B6078F00BA34DE /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		09837F7021B608A800BA34DE /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		09837F7221B613C800BA34DE /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
+		09837F7521B615D800BA34DE /* LoginAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAPI.swift; sourceTree = "<group>"; };
+		09837F7721B6165200BA34DE /* LoginAPIEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAPIEntity.swift; sourceTree = "<group>"; };
+		09837F7921B616B600BA34DE /* LoginAPIRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAPIRepository.swift; sourceTree = "<group>"; };
 		09C2F73ABF7936F80B16F9BA /* Pods-CleanSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CleanSample/Pods-CleanSample.debug.xcconfig"; sourceTree = "<group>"; };
 		5C4EA875F9DE75EEF4B19007 /* Pods_CleanSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9071B3832595FBE6E902D41B /* Pods-CleanSampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanSampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CleanSampleTests/Pods-CleanSampleTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -165,6 +179,7 @@
 		092A8C7621B1391E00320D4F /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				09837F6821B6077B00BA34DE /* LoginInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -172,6 +187,7 @@
 		092A8C7721B1392D00320D4F /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				09837F6A21B6078F00BA34DE /* LoginPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -214,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				09837F5D21B517C800BA34DE /* DataLayer */,
+				09837F6C21B6079E00BA34DE /* DomainLayer */,
 				092A8C7521B1391400320D4F /* PresentationLayer */,
 			);
 			path = ArchitectureClass;
@@ -269,8 +286,9 @@
 		09837F5E21B517D100BA34DE /* WebAPI */ = {
 			isa = PBXGroup;
 			children = (
-				09837F6721B5280D00BA34DE /* Entity */,
 				09837F6621B527ED00BA34DE /* Repository */,
+				09837F7421B615BC00BA34DE /* APIs */,
+				09837F6721B5280D00BA34DE /* Entity */,
 				09837F5F21B517F600BA34DE /* Client */,
 			);
 			path = WebAPI;
@@ -288,6 +306,7 @@
 		09837F6621B527ED00BA34DE /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				09837F7921B616B600BA34DE /* LoginAPIRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -295,8 +314,50 @@
 		09837F6721B5280D00BA34DE /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				09837F7721B6165200BA34DE /* LoginAPIEntity.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		09837F6C21B6079E00BA34DE /* DomainLayer */ = {
+			isa = PBXGroup;
+			children = (
+				09837F6F21B607C100BA34DE /* Translator */,
+				09837F6E21B607B900BA34DE /* UseCase */,
+				09837F6D21B607B300BA34DE /* Model */,
+			);
+			path = DomainLayer;
+			sourceTree = "<group>";
+		};
+		09837F6D21B607B300BA34DE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				09837F7021B608A800BA34DE /* LoginModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		09837F6E21B607B900BA34DE /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				09837F7221B613C800BA34DE /* LoginUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		09837F6F21B607C100BA34DE /* Translator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Translator;
+			sourceTree = "<group>";
+		};
+		09837F7421B615BC00BA34DE /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				09837F7521B615D800BA34DE /* LoginAPI.swift */,
+			);
+			path = APIs;
 			sourceTree = "<group>";
 		};
 		09BBB936008FF651BEE0625F /* Frameworks */ = {
@@ -494,17 +555,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09837F7A21B616B600BA34DE /* LoginAPIRepository.swift in Sources */,
 				092A8C7F21B4C12C00320D4F /* StartupRouter.swift in Sources */,
+				09837F7121B608A800BA34DE /* LoginModel.swift in Sources */,
 				092A8C7C21B4BFEF00320D4F /* IDField.swift in Sources */,
 				09837F6521B51B9100BA34DE /* WebAPIConst.swift in Sources */,
+				09837F7821B6165200BA34DE /* LoginAPIEntity.swift in Sources */,
 				092A8C7221B138CA00320D4F /* LoginView.swift in Sources */,
 				09837F6321B518D200BA34DE /* APIClient.swift in Sources */,
 				092A8C8221B4C2D900320D4F /* StartupRouterConst.swift in Sources */,
 				092A8C8921B4C92D00320D4F /* Utility.swift in Sources */,
 				092A8C8421B4C88800320D4F /* LoginViewController.swift in Sources */,
+				09837F6B21B6078F00BA34DE /* LoginPresenter.swift in Sources */,
+				09837F6921B6077B00BA34DE /* LoginInteractor.swift in Sources */,
 				092A8C7A21B4BFE300320D4F /* PasswordField.swift in Sources */,
+				09837F7621B615D800BA34DE /* LoginAPI.swift in Sources */,
 				09837F6121B5180900BA34DE /* Request.swift in Sources */,
 				092A8C5221B134D400320D4F /* AppDelegate.swift in Sources */,
+				09837F7321B613C800BA34DE /* LoginUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
