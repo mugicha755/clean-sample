@@ -13,17 +13,17 @@ struct LoginAPI: Request {
     ///MARK: Protocol
     typealias Response = LoginAPIEntity
 
-    var method : Method {
+    var method: Method {
         return .POST
     }
 
-    var path : APIPath {
+    var path: APIPath {
         return .login
     }
 
     var requestModel: LoginModel.API.Request?
-    
-    var parameters: [String : AnyObject] {
+
+    var parameters: [String: AnyObject] {
         return ["id": requestModel?.id as AnyObject, "password": requestModel?.password as AnyObject]
     }
 
