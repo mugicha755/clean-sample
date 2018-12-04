@@ -11,7 +11,7 @@ import ObjectMapper
 struct LoginAPIEntity: Mappable {
     var error: String?
 
-    init?(map: Map){
+    init?(map: Map) {
     }
 
     mutating func mapping(map: Map) {

@@ -105,14 +105,14 @@ extension LoginViewController: LoginDisplayLogic {
         let alert: UIAlertController = UIAlertController(
             title: "Login result",
             message: model.message,
-            preferredStyle:  UIAlertController.Style.alert)
-        
+            preferredStyle: UIAlertController.Style.alert)
+
         let defaultAction: UIAlertAction = UIAlertAction(
             title: "OK",
             style: UIAlertAction.Style.default, handler: {
-                (action: UIAlertAction!) -> Void in
+                (_: UIAlertAction!) -> Void in
         })
-        
+
         alert.addAction(defaultAction)
         present(alert, animated: true, completion: nil)
     }

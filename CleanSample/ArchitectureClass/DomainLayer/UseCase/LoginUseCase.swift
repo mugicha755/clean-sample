@@ -14,9 +14,9 @@ class LoginUseCase {
 
     func executeAuthentication(_ request: LoginModel.API.Request) {
         LoginAPIRepository().login(request)
-        .then { result in
+        .then { _ in
             self.interactor?.didLogin(LoginModel.Display.ViewModel(message: "succeed !!!"))
-        }.catch() { error in
+        }.catch { error in
             self.interactor?.didLogin(error)
         }
     }

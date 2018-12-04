@@ -14,14 +14,14 @@ public class LoginAPIRepository {
             var request = LoginAPI()
             request.requestModel = parameter
             APIClient().request(request: request)
-                .then{ result in
+                .then { result in
                     resolve(result)
                 }
-                .catch{ error in
+                .catch { error in
                     reject(error)
             }
         }
-        return promise;
+        return promise
     }
 
 }

@@ -32,7 +32,7 @@ class LoginInteractor: LoginBusinessLogic {
             self.isWorking = true
         }
     }
-    
+
 }
 
 extension LoginInteractor: LoginAPIResultLogic {

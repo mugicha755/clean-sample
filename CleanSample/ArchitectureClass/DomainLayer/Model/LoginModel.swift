@@ -16,7 +16,7 @@ enum LoginModel {
             var password: String
         }
     }
-    
+
     /// MARK: Display ViewModel
     enum Display {
         struct ViewModel {

@@ -14,7 +14,7 @@ protocol LoginPresentationLogic {
 
 class LoginPresenter: LoginPresentationLogic {
     weak var viewController: LoginDisplayLogic?
-    
+
     /// MARK: do authentication
     func presentAuthentication(_ model: LoginModel.Display.ViewModel) {
         viewController?.didAuthentication(model)
